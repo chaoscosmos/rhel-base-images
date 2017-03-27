@@ -37,7 +37,7 @@ The steps below have been performed on an Ubuntu 15.10 OS running as a PowerKVM 
     # rpm --root ${rpm_root} --initdb
 ```
 
-    The rest of the install instructions will use this new RPM root as the install destination for a minimalistic RHEL OS.
+The rest of the install instructions will use this new RPM root as the install destination for a minimalistic RHEL OS.
     
 3. Install the redhat-release-server rpm package for RHEL 7.1 LE
 
@@ -71,7 +71,8 @@ The steps below have been performed on an Ubuntu 15.10 OS running as a PowerKVM 
     # yum -y --installroot=${rpm_root} install yum
 ```
 
-    This will install a minimalistic RHEL OS under /rhel7-root
+This will install a minimalistic RHEL OS under /rhel7-root
+
 7. Additional Customization
     Chroot to the new RHEL installation and perform any additional customizations if required
 ```
@@ -90,7 +91,7 @@ The steps below have been performed on an Ubuntu 15.10 OS running as a PowerKVM 
     rhel7le               latest              9a6dac402e2b        11 seconds ago      360.6 MB
 ```
 
-    Use the new RHEL docker image
+Use the new RHEL docker image
 
 ```
     # docker run --hostname='rhel7-container' rhel7le uname -a
